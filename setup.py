@@ -15,7 +15,7 @@ setup(name='PyLyrics',
       packages=['PyLyrics'],
       url="http://github.com/geekpradd/PyLyrics",
       install_requires=[
-            'beautifulsoup4','requests',],
+            'beautifulsoup4','requests','lxml'],
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Topic :: Internet",
