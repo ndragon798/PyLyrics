@@ -66,7 +66,11 @@ class PyLyrics:
 			if al.text.lower().strip() == album.name.strip().lower():
 				currentAlbum = al
 				break
-		songs =[Track(song.text,album,album.artist()) for song in currentAlbum.findNext('songs').findAll('item')]
+		if currentAlbum!=None:
+			currentAlbum=""
+			songs =[Track(song.text,album,album.artist()) for song in currentAlbum.findNext('songs').findAll('item')]
+		else:
+			songs =[Track(song.text,album,album.artist()) for song in currentAlbum.findNext('songs').findAll('item')]
 		return songs
 
 	@staticmethod
