@@ -67,7 +67,7 @@ class PyLyrics:
 				currentAlbum = al
 				break
 		if currentAlbum!=None:
-			currentAlbum=""
+			#currentAlbum=""
 			songs =[Track(song.text,album,album.artist()) for song in currentAlbum.findNext('songs').findAll('item')]
 		else:
 			songs =[Track(song.text,album,album.artist()) for song in currentAlbum.findNext('songs').findAll('item')]
